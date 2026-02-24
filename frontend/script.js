@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingMessage = document.getElementById('booking-message');
     const submitBtn = document.getElementById('submit-btn');
 
-    // API Base URL (change if hosted elsewhere)
-    const API_URL = 'http://localhost:3000/api';
+    // API Base URL (relative path works for both local and production since frontend is served by backend)
+    const API_URL = '/api';
 
     // Set minimum dates for inputs
     const today = new Date().toISOString().split('T')[0];
