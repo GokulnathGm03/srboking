@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjai Rooms | Beautiful Stays</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Sanjai<span>Rooms</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Our Rooms</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Find Your Perfect Stay</h1>
+            <p>Experience luxury and comfort with Sanjai Rooms. Book your dream room today.</p>
+            <a href="#rooms" class="btn">Explore Rooms</a>
+        </div>
+    </header>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <h2>Available Rooms</h2>
+        <div class="rooms-container" id="rooms-container">
+            <!-- Rooms will be loaded here dynamically via JS -->
+            <div class="loading">Loading beautiful rooms...</div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-room-name">Book Your Room</h3>
+            <form id="booking-form">
+                <input type="hidden" id="room-id" name="roomId">
+                
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="date-group">
+                    <div class="input-group">
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" id="checkIn" name="checkIn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" id="checkOut" name="checkOut" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Confirm Booking</button>
+            </form>
+            <div id="booking-message" class="message hidden"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sanjai Rooms. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
